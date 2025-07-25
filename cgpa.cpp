@@ -105,6 +105,55 @@ void calculateGPA(){
     }
 }
 
+void calculateCGPA(){
+    system("cls");
+    
+    int l;
+    cout<<"-------------- CGPA Calculating -----------------\n\n"<<endl;
+    cout<<"How many semester's GPA you want to enter: ";
+    cin>>l;
+    cout<<"\n\n"<<endl;
+    float semrs[1];
+    int i;
+
+    for (i=0;i<1;i++){
+        cout<<"Enter Semester: " <<i+1<<" Result(GPA): ";
+        cin>>semrs[i];
+        cout<<"\n"<<endl;
+    }
+
+    float semtot=0;
+    for(int j=0;j<1;j++){
+        semtot=semtot+semrs[j];
+    }
+
+    cout<<"******** Your CGPA is"<<semtot/l<<" ********"<<endl;
+
+    sub:
+    int inmenu;
+    cout<<"\n\n1. Calculate Again"<<endl;
+    cout<<"2. Back to Main Menu"<<endl;
+    cout<<"3. Exit Application"<<endl;
+    cout<<"Enter Your Choice: "<<endl;
+    cin>>inmenu;
+
+    switch(inmenu){
+
+
+        case 1:
+            calculateCGPA();
+            break;
+        case 2:
+            main();
+            break;
+        case 3:
+            exit(EXIT_SUCCESS);
+        default:
+            cout<<"You have entered wrong input.Try again!\n"<<endl;
+            goto sub;
+    }
+}
+
 
 
 
