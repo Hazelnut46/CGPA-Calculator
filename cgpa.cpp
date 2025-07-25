@@ -63,5 +63,48 @@ void calculateGPA(){
         cin>>point[i];
         cout<<"-----------------------------------\n\n"<<endl;
     }
+
+    float sum=0;
+    float tot;
+    for (int j=0;j<q;j++){
+        tot=credit[j]*point[j];
+        sum=sum+tot;
+    }
+
+    float totCr=0;
+    for(int k=0;k<q;k++){
+        totCr=totCr+credit[k];
+    }
+
+    cout<<"\n\nTotal Points Earned: "<<sum<<" . Total Credits: "<<totCr<<" . Total GPA: "<<sum/totCr<<" ."<<endl;
+
+
+    sub:
+    int inmenu;
+    cout<<"\n\n1. Calculate GPA Again"<<endl;
+    cout<<"2. Back to Main Menu"<<endl;
+    cout<<"3. Exit Application"<<endl;
+    cout<<"Enter Your Choice: ";
+    cin>>inmenu;
+
+
+
+    switch(inmenu){
+
+        case 1:
+            calculateGPA();
+            break;
+        case 2:
+            main();
+            break;
+        case 3:
+            exit(EXIT_SUCCESS);
+        default:
+            cout<<"You have entered wrong input.Try again!\n"<<endl;
+            goto sub;
+    }
 }
+
+
+
 
