@@ -155,5 +155,35 @@ void calculateCGPA(){
 }
 
 
+void method(){
 
+    system("cls");
+    cout<<"--------------- Method of Calculating GPA & CGPA ---------------\n\n"<<endl;
+    cout<<" GPA = Sum of (Credit*Point) / total of credit \n"<<endl;
+    cout<<" CGPA = Sum of GPA / Number of semesters "<<endl;
+    cout<<"-----------------------------------------------------------------\n\n"<<endl;
+
+
+    sub:
+    int inmenu;
+    cout<<"1. Go Back to Main Menu"<<endl;
+    cout<<"2. Exit This App \n\n"<<endl;
+    cout<<"Your Input: "<<endl;
+    cin>>inmenu;
+
+    switch(inmenu){
+
+
+        case 1:
+            main();
+            break;
+
+        case 2:
+            exit(EXIT_SUCCESS);
+
+        default:
+            cout<<"You have entered wrong input.Try again!\n"<<endl;
+            goto sub;
+    }
+};
 
